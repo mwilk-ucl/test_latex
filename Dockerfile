@@ -9,6 +9,7 @@ RUN apt-get update && \
     texlive-xetex && \
     apt-get autoclean && apt-get --purge --yes autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ 
+VOLUME . /app
+RUN xelatex /app/document.tex
 
-VOLUME ["/"]
-RUN xelatex document.tex
