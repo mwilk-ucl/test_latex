@@ -12,4 +12,3 @@ RUN apt-get update && \
 
 VOLUME ["/"]
 RUN xelatex document.tex
-RUN cp *.pdf / 2>/dev/null || :
