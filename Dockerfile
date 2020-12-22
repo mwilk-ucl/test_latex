@@ -9,6 +9,7 @@ RUN apt-get update && \
     texlive-xetex && \
     apt-get autoclean && apt-get --purge --yes autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-    
+
+VOLUME ["/"]
 RUN xelatex document.tex
 RUN cp *.pdf / 2>/dev/null || :
