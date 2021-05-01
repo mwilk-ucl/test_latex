@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:latest 
 
 # Install all TeX and LaTeX dependencies
 RUN apt-get update && \
